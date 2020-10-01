@@ -9,7 +9,8 @@ export const HeroBg = styled.section`
   height: 100vh;
 `;
 export const HeroContainer = styled.div`
-  width: 720px;
+  width: 100%;
+  max-width: 720px;
   height: 100vh;
   margin: auto;
   display: flex;
