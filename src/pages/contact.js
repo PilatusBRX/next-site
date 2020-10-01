@@ -7,7 +7,6 @@ const Contact = () => {
       <Head>
         <title>Knoxx - Contact</title>
       </Head>
-      <h1>Keep In Touch</h1>
       <ContactForm />
     </Layout>
   );

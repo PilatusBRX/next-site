@@ -4,11 +4,16 @@ export const Form = styled.form`
   width: 100%;
   max-width: 720px;
   margin: 0 auto;
-  margin-top: 150px;
   padding: 50px;
   background-color: #ebebeb;
   display: flex;
   flex-direction: column;
+`;
+export const Title = styled.h1`
+  font-size: 48px;
+  margin-top: 200px;
+  letter-spacing: 8px;
+  margin-bottom: 50px;
 `;
 
 export const Input = styled.input`

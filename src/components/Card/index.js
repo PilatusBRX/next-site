@@ -1,10 +1,12 @@
+import { ListItem, Icon, Title, Desc } from "./style";
+
 const Card = ({ card }) => {
   return (
-    <li>
-      <span>{card.icon}</span>
-      <h3>{card.title}</h3>
-      <p>{card.desc}</p>
-    </li>
+    <ListItem>
+      <Icon>{card.icon}</Icon>
+      <Title>{card.title}</Title>
+      <Desc>{card.desc}</Desc>
+    </ListItem>
   );
 };
 
