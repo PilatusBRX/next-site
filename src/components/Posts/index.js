@@ -1,7 +1,18 @@
-import React from "react";
+import { Container, Post, Item, Desc, Title } from "./style";
 
-const Posts = () => {
-  return <div></div>;
+const Users = ({ posts }) => {
+  return (
+    <Container>
+      {posts.map((post) => (
+        <Post key={post.id}>
+          <Item>
+            <Title>{post.title}</Title>
+            <Desc>{post.body}</Desc>
+          </Item>
+        </Post>
+      ))}
+    </Container>
+  );
 };
 
-export default Posts;
+export default Users;

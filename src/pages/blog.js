@@ -2,16 +2,23 @@ import Layout from "../components/Layout";
 import Head from "next/head";
 import styled from "styled-components";
 import Posts from "../components/Posts";
-const Blog = () => {
+import fetch from "isomorphic-unfetch";
+const Blog = ({ posts }) => {
   return (
     <Layout>
       <Head>
         <title>Knoxx - Blog</title>
       </Head>
       <Title>Our Blog</Title>
-      <Posts />
+      <Posts posts={posts} />
     </Layout>
   );
+};
+
+Blog.getInitialProps = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users/1/posts");
+  const posts = await res.json();
+  return { posts };
 };
 
 export default Blog;
